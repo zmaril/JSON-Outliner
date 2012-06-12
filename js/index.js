@@ -151,10 +151,6 @@ fish_points = function(e) {
   return points.circs.each(function(d) {
     var move, point;
     move = points.fisheye(d);
-    $(this).tooltip({
-      title: "[" + d.x + "," + d.y + "]",
-      placement: "top"
-    });
     point = d3.select(this);
     if (move.x === d.x && move.y === d.y) {
       return point.attr("r", 1).attr("transform", function(d) {

@@ -149,10 +149,6 @@ fish_points = (e)->
   points.circs
    .each((d)->
       move = points.fisheye(d)
-      $(this).tooltip(
-        title: "[#{d.x},#{d.y}]"
-        placement: "top"
-      )
       point = d3.select(this)
       if move.x is d.x and move.y is d.y
           point
