@@ -1,10 +1,12 @@
 body {
   font: 10px sans-serif;
 }
-
 #main {
   margin-top: 40px;
 }
 #main #text {
   padding-bottom: 10px;
+}
+#threshold-slider {
+  width: 100%;
 }

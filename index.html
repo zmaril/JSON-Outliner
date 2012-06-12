@@ -33,16 +33,14 @@ n
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">Dashboard</a>
+        <a class="brand" href="#">JSON Outliner</a>
         <div class="nav-collapse">
           <ul class="nav">
-            <li class="active"><a href="">These</a></li>
-            <li><a href="">Don't</a></li>
-            <li><a href="">Do</a></li>
-            <li><a href="">Anything</a></li>
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">About</a></li>
             <li class="vertical-divide"></li>
             <li><a href=""></a></li>
-            <li><a href="">Yet</a></li>
+            <li><a href="http://www.zacharymaril.com">By Zack Maril</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -53,19 +51,32 @@ n
   <section id="main">
     <div class="fluid-container">
       <div class="fluid-row">
-        <div class="offset1 span4">
-          <h1>Metrics for the rest of us.</h1>
-          <blockquote>
-            <p> This is where I say I've had enough and no one should ever
-            feel the way that I feel now.</p>
-            <small>Crappy Dashboard Confessional song</small>
-          </blockquote>
-          <div>
-            <div id="slider"></div>
-          </div>
+        <div class="span6">
+          <h1>Original</h1>
+          <img id="original"></img>
+          <form>
+            <input type="file" id="file"></input>
+          </form>
         </div>        
-        <div class="span8">  
-          <div id="graphic"></div>
+        <div class="span6">  
+          <h1>Outlined</h1>
+          <ul class="nav nav-tabs">
+            <li><a href="#unchanged" data-toggle="tab">Original</a></li>
+            <li><a href="#blackwhite" data-toggle="tab">Black/White</a></li>
+            <li><a href="#points" data-toggle="tab">Points</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane" id="unchanged">
+              <canvas id="original"></canvas>
+            </div>
+            <div class="tab-pane" id="blackwhite">
+              <canvas id="blackwhite_c"></canvas>
+            </div>
+            <div class="tab-pane" id="points">
+              <div id="threshold-slider"></div>
+            </div>
+          </div>
         </div>
       </div>  
     </div>
@@ -78,6 +89,7 @@ n
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/jquery-ui-1.8.18.custom.min.js"></script>
     <script src="js/vendor/d3.v2.min.js"></script>
+    <script src="js/vendor/fisheye.js"></script>
     <script src="js/vendor/underscore.min.js"></script>
     <script src="js/vendor/backbone.min.js"></script>
     <script src="js/index.js"></script>
